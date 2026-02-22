@@ -20,7 +20,10 @@ app = FastAPI(title="Caudal API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=[
+    "http://localhost:3000",
+    "https://caudal-finance-app-rze9.vercel.app/"
+],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
